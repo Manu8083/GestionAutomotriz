@@ -1,0 +1,42 @@
+img{
+    width: 40%;
+    height: 100%;
+}
+/*Centrado de imagen*/
+.starter-template{
+    text-align: center;
+}
+/*Estilos para cambiar de color el boton de nuevo usuario*/
+button.btn.btn-primary.btn-lg{
+    width: 100%;
+    background-color: #c40123;
+    border-color: #c40123;
+    margin-bottom: 3%
+}
+/*Cambiar color nav-bar*/
+nav.navbar.navbar-inverse{
+    background-color: #5d5d5d;
+    border-color: #5d5d5d;
+}
+/*Cambiar de color es texto nav.bar*/
+nav.navbar.navbar-inverse a{
+    color: white;
+}
+/*Color de los botones */
+.btn-danger,.btn-info{
+    background-color: #c40123;
+    color: white;
+}
+.btn-info:hover{
+    background-color: #5d5d5d;
+    border-color: #5d5d5d;
+}
+button.logout{
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    padding: 5px 20px 5px 20px;
+    color: white;
+    background-color: #a4a3a1;
+    border-color: #a4a3a1;
+}

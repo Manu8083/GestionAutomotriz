@@ -60,6 +60,7 @@
         <li><a href="#about-section" class="page-scroll">Nosotros</a></li>
         <li><a href="#team-section" class="page-scroll">Nuestro Equipo</a></li>
         <li><a href="#contact-section" class="page-scroll">Contacto</a></li>
+        <li><a href="backend/login.php" class="page-scroll">Admin</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -256,7 +257,7 @@
       <p>Contamos con las de 20 años de experiencia en el sector automotriz.</p>
     </div>
     <div id="row">
-      <div class="col-md-6 col-sm-6 team wow fadeInUp" data-wow-delay="200ms">
+      <div class="col-md-12 col-sm-12 team wow fadeInUp" data-wow-delay="200ms">
         <div class="thumbnail"> <img src="img/team/CEO.png" alt="..." class="img-circle team-img">
           <div class="caption">
             <h3>Wilmer Pulido</h3>
@@ -268,44 +269,6 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-sm-6 team wow fadeInUp" data-wow-delay="400ms">
-        <div class="thumbnail"> <img src="img/team/02.jpg" alt="..." class="img-circle team-img">
-          <div class="caption">
-            <h3>Wilmer Pulido</h3>
-            <p>Co-Fundador / Gerente Administrativo</p>
-                        <ul class="list-inline">
-              <li><a href="https://www.facebook.com/GestionAutomotrizJP1"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="col-md-3 col-sm-6 team wow fadeInUp" data-wow-delay="600ms">
-        <div class="thumbnail"> <img src="img/team/03.jpg" alt="..." class="img-circle team-img">
-          <div class="caption">
-            <h3>Michele Doe</h3>
-            <p>Web Designer</p>
-                       <ul class="list-inline">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 team wow fadeInUp" data-wow-delay="800ms">
-        <div class="thumbnail"> <img src="img/team/04.jpg" alt="..." class="img-circle team-img">
-          <div class="caption">
-            <h3>Larry Evans</h3>
-            <p>Project Manager</p>
-                        <ul class="list-inline">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
 </div>
@@ -386,6 +349,7 @@
         </div>
         <div id="success"></div>
         <button type="submit" class="btn btn-default">Enviar Mensaje</button>
+        <a onclick="Nuevo();" class="btn btn-default">Solicitud Servicio</a>
       </form>
       <div class="social">
         <ul>
@@ -659,6 +623,7 @@
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
 <script type="text/javascript" src="js/contact_me.js"></script>
 <script type="text/javascript" src="js/owl.carousel.js"></script>
+
 
 <!-- Javascripts
     ================================================== -->
