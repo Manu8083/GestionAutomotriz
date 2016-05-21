@@ -19,8 +19,13 @@ if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
 function Registrar(idP, accion){
 	nombres = document.frmClientes.nombres.value;
 	apellidos = document.frmClientes.apellidos.value;
-	edad = document.frmClientes.edad.value;
 	email = document.frmClientes.email.value;
+	marca_vehiculo = document.frmClientes.marca_vehiculo.value;
+	modelo = document.frmClientes.modelo.value;
+	year = document.frmClientes.year.value;
+	kilometraje = document.frmClientes.kilometraje.value;
+	telefonos = document.frmClientes.telefonos.value;
+
 	ajax = objetoAjax();
 
 	if(accion=='N'){
@@ -37,7 +42,7 @@ function Registrar(idP, accion){
 			}
 		}
 	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-	ajax.send("nombres="+nombres+"&apellidos="+apellidos+"&edad="+edad+"&email="+email+"&idP="+idP);
+	ajax.send("&nombres="+nombres+"&apellidos="+apellidos+"&email="+email+"&marca_vehiculo="+marca_vehiculo+"&modelo="+modelo+"&year="+year+"&kilometraje="+kilometraje+"&telefonos="+telefonos+"&idP="+idP);
 
 }
 

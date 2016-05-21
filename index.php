@@ -73,7 +73,7 @@
   <div class="intro-text">
     <h1 class="wow fadeInDown">Gestion Automotriz <strong><span class="color">JP</span></strong></h1>
     <p class="wow fadeInDown">Compormetidos con su tiempo</p>
-    <a href="#works-section" class="btn btn-default btn-lg page-scroll wow fadeInUp" data-wow-delay="200ms">Servicios</a> </div>
+    <a onclick="Nuevo();" class="btn btn-default btn-lg page-scroll wow fadeInUp" data-wow-delay="200ms">Solicitar Servicio</a> </div>
 </header>
 
 <!-- Services Section -->
@@ -349,7 +349,6 @@
         </div>
         <div id="success"></div>
         <button type="submit" class="btn btn-default">Enviar Mensaje</button>
-        <a onclick="Nuevo();" class="btn btn-default">Solicitud Servicio</a>
       </form>
       <div class="social">
         <ul>
@@ -610,7 +609,7 @@
     </div>
   </div>
 </div>
-
+<script type="text/javascript" src="backend/js/codigo.js"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
