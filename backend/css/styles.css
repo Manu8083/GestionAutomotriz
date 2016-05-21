@@ -9,8 +9,8 @@ img{
 /*Estilos para cambiar de color el boton de nuevo usuario*/
 button.btn.btn-primary.btn-lg{
     width: 100%;
-    background-color: #520A16;
-    border-color: #520A16;
+    background-color: #c40123;
+    border-color: #c40123;
     margin-bottom: 3%
 }
 /*Cambiar color nav-bar*/
@@ -24,7 +24,7 @@ nav.navbar.navbar-inverse a{
 }
 /*Color de los botones */
 .btn-danger,.btn-info{
-    background-color: #520A16;
+    background-color: #c40123;
     color: white;
 }
 .btn-info:hover{
