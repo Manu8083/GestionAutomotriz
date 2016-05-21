@@ -16,8 +16,6 @@ if(isset($_SESSION['user'])) {
   <link href="css/styles.css" rel="stylesheet">
   <script type="text/javascript" src="js/ajax.js"></script>
   <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.validate.js"></script>
-  <script src="js/validate.js"></script>
 
 
 </head>

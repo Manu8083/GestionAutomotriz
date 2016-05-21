@@ -127,12 +127,12 @@
     <div class="categories">
       <ul class="cat">
         <li>
-          <ol class="type">
+          <!-- <ol class="type">
             <li><a href="#" data-filter="*" class="active">Todos</a></li>
             <li><a href="#" data-filter=".Prioritarios">Prioritarios</a></li>
             <li><a href="#" data-filter=".Preventivos">Preventivos</a></li>
             <li><a href="#" data-filter=".Otros">Otros</a></li>
-          </ol>
+          </ol> -->
         </li>
       </ul>
       <div class="clearfix"></div>
@@ -587,7 +587,7 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body">
             <!-- Project Details Go Here -->
-            <h2>Asesoría en compra de vehículo nuevo o usado</h2>
+            <h2>Asesoría en compra de vehículo</h2>
             <img class="img-responsive img-centered" src="img/portfolio/06.jpg" alt="">
             <p style="font-size:15px; text-align: justify;">Para todas las personas interesadas en adquirir vehículo nuevo o usado le brindamos
                 asesoría y acompañamiento para la toma de una buena decisión, desde la gestión de

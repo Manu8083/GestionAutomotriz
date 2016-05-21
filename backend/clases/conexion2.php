@@ -3,7 +3,7 @@
 		function Conectar(){
 			$conn = null;
 			$host = 'localhost';
-			$db = 'crud';
+			$db = 'gestio1_automotriz';
 			$user = 'root';
 			$pwd = 'root';
 			try {
