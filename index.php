@@ -25,11 +25,13 @@
 
 <!-- Stylesheet
     ================================================== -->
+
 <link rel="stylesheet" type="text/css"  href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/animate.min.css">
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="backend/js/ajax.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -58,7 +60,6 @@
         <!-- <li><a href="#services-section" class="page-scroll">Services</a></li> -->
         <li><a href="#works-section" class="page-scroll">Servicios</a></li>
         <li><a href="#about-section" class="page-scroll">Nosotros</a></li>
-        <li><a href="#team-section" class="page-scroll">Nuestro Equipo</a></li>
         <li><a href="#contact-section" class="page-scroll">Contacto</a></li>
         <li><a href="backend/login.php" class="page-scroll">Admin</a></li>
       </ul>
@@ -76,46 +77,81 @@
     <a onclick="Nuevo();" class="btn btn-default btn-lg page-scroll wow fadeInUp" data-wow-delay="200ms">Solicitar Servicio</a> </div>
 </header>
 
-<!-- Services Section -->
-<!-- <div id="services-section" class="text-center">
-  <div class="container">
-    <div class="section-title wow fadeInDown">
-      <h2>Nuestros <strong>Servicios</strong></h2>
-      <hr>
-      <div class="clearfix"></div>
-      <p>Pensando en nuestros clientes ofrecemos esta clase de servicios para facilitarle cualquier tramite o diligencia que por falta de tiempo no pueda realizar,acompañándolo así en la toma de buenas decisiones para usted y su familia</p>
-    </div>
-    <div class="space"></div>
-    <div class="row">
-      <div class="col-md-3 col-sm-6 service wow fadeInUp" data-wow-delay="200ms"> <i class="fa fa-car"></i>
-        <h4><strong><a href="#portfolioModal7">Mantenimiento preventivo a domicilio.</a></strong></h4>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
-      </div>
-      <div class="col-md-3 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> <i class="fa fa-gears"></i>
-        <h4><strong>Mecánica especializada.</strong></h4>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.</p>
-      </div>
-      <div class="col-md-3 col-sm-6 service wow fadeInUp" data-wow-delay="600ms"> <i class="fa fa-bullhorn"></i>
-        <h4><strong>Accesorios y Seguros</strong></h4>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
-      </div>
-      <div class="col-md-3 col-sm-6 service wow fadeInUp" data-wow-delay="800ms"> <i class="fa fa-rocket"></i>
-        <h4><strong>Lamina y pintura</strong></h4>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</p>
-      </div>
 
-      <div class="col-md-3 col-sm-6 service wow fadeInUp" data-wow-delay="200ms"> <i class="fa fa-desktop"></i>
-        <h4><strong>Peritaje a domicilio</strong></h4>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Nuevo Cliente </h4>
       </div>
-      <div class="col-md-3 col-sm-6 service wow fadeInUp" data-wow-delay="400ms"> <i class="fa fa-gears"></i>
-        <h4><strong>Asesoría en compra de vehículo nuevo o usado</strong></h4>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.</p>
+      <!-- //formulario -->
+
+
+      <form role="form" action="" id="FormData" name="frmClientes" onsubmit="Registrar(idP,accion); return false">
+          <fieldset>
+            <div class="col-lg-12">
+              <div class="form-group">
+                <label>Nombre</label>
+                <input name="nombres" id="nombres" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label>apellidos</label>
+                <input name="apellidos"  class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label>Email</label>
+                <input name="email" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>Marca del vehiculo</label>
+                <input name="marca_vehiculo" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>Modelo</label>
+                <input name="modelo" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>Año</label>
+                <input name="year" class="form-control" >
+              </div>
+              <div class="form-group">
+                <label>Kilimetraje</label>
+                <input name="kilometraje" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>Telefonos</label>
+                <input name="telefonos" class="form-control" >
+              </div>
+
+              <button type="submit" value="submit" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Registrar
+              </button>
+
+            </div>
+        </fieldset>
+      </form>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-circle" data-dismiss="modal"><i class="fa fa-times"></i>x</button>
       </div>
-      </div>
+    </div>
   </div>
-</div> -->
-<!-- Portfolio Section -->
+</div>
+
+
+
+
+
+
+
 <div id="works-section" class="text-center">
   <div class="container"> <!-- Container -->
     <div class="section-title wow fadeInDown">
@@ -213,7 +249,22 @@
       <div class="clearfix"></div>
     </div>
     <div class="row">
-      <div class="col-md-6 wow fadeInLeft"> <img src="img/mecanico2.png" class="img-responsive"> </div>
+      <div class="col-md-6 wow fadeInLeft">
+
+
+              <div class="thumbnail"> <img src="img/team/CEO.jpg" alt="..." class="img-circle team-img">
+                <div class="caption">
+                  <h3>Wilmer Pulido</h3>
+                  <p>Fundador / Gerente General</p>
+                              <ul class="list-inline">
+                    <li><a href="https://www.facebook.com/GestionAutomotrizJP1"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+
+
+    </div>
       <div class="col-md-6 wow fadeInRight">
           <h4>Mision</h4>
           <p>Gestión automotriz es una empresa comprometida en brindar soluciones efectivas y
@@ -248,7 +299,7 @@
   </div>
 </div>
 <!-- Team Section -->
-<div id="team-section" class="text-center">
+<!-- <div id="team-section" class="text-center">
   <div class="container">
     <div class="section-title wow fadeInDown">
       <h2>Nuestro <strong>Equipo</strong></h2>
@@ -256,9 +307,9 @@
       <div class="clearfix"></div>
       <p>Contamos con las de 20 años de experiencia en el sector automotriz.</p>
     </div>
-    <div id="row">
-      <div class="col-md-12 col-sm-12 team wow fadeInUp" data-wow-delay="200ms">
-        <div class="thumbnail"> <img src="img/team/CEO.png" alt="..." class="img-circle team-img">
+
+
+        <div class="thumbnail"> <img src="img/team/CEO.jpg" alt="..." class="img-circle">
           <div class="caption">
             <h3>Wilmer Pulido</h3>
             <p>Fundador / Gerente General</p>
@@ -268,12 +319,12 @@
             </ul>
           </div>
         </div>
-      </div>
-    </div>
+
+
   </div>
-</div>
+</div> -->
 <!-- Testimonials Section -->
-<div id="testimonials-section" class="text-center">
+<!-- <div id="testimonials-section" class="text-center">
   <div class="container">
     <div class="section-title wow fadeInDown">
       <h2>¿Que dicen nuestro <strong>clientes</strong> ?</h2>
@@ -298,7 +349,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Contact Section -->
 <div id="contact-section" class="text-center">

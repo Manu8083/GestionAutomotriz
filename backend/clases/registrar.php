@@ -27,6 +27,5 @@
 		$telefonos = trim(htmlentities(mysql_real_escape_string($_POST["telefonos"])));
 
 		$response = array();
-
 	}
  ?>

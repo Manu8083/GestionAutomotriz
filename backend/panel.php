@@ -142,7 +142,7 @@ if(isset($_SESSION['user'])) {
                     <div class="form-group">
                       <label>Telefonos</label>
                       <input name="telefonos" class="form-control" >
-                    </div>
+                    </div
 
                     <button type="submit" value="submit" class="btn btn-info btn-lg">
                       <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Registrar
@@ -151,9 +151,7 @@ if(isset($_SESSION['user'])) {
                   </div>
               </fieldset>
             </form>
-            <script>
-            $("#commentForm").validate();
-            </script>
+
 
             <div class="modal-footer">
               <button type="button" class="btn btn-danger btn-circle" data-dismiss="modal"><i class="fa fa-times"></i>x</button>
