@@ -251,17 +251,18 @@
     <div class="row">
       <div class="col-md-6 wow fadeInLeft">
 
-
+            <center>
               <div class="thumbnail"> <img src="img/team/CEO.jpg" alt="..." class="img-circle team-img">
                 <div class="caption">
                   <h3>Wilmer Pulido</h3>
+                  <p>Cuento con 5 años de experiencia en el sector automotriz. <br>Este seguro de que su vehiculo esta en las mejores manos</p>
                   <p>Fundador / Gerente General</p>
-                              <ul class="list-inline">
-                    <li><a href="https://www.facebook.com/GestionAutomotrizJP1"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  </ul>
+
+                      <a href="https://www.facebook.com/GestionAutomotrizJP1"><i class="fa fa-facebook"></i> </a>
+
                 </div>
               </div>
+          </center>
 
 
     </div>
