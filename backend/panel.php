@@ -49,6 +49,7 @@ if(isset($_SESSION['user'])) {
               <th>Año</th>
               <th>Kilometraje</th>
               <th>Telefonos</th>
+              <th>Comentarios</th>
               <th>Acciones</th>
             </tr>
           </thead>
@@ -56,7 +57,7 @@ if(isset($_SESSION['user'])) {
           <?php
           	require("clases/conexion.php");
           	$con = Conectar();
-          	$sql = "SELECT id, nombres, apellidos, email, marca_vehiculo, modelo, year, kilometraje, telefonos FROM datos";
+          	$sql = "SELECT id, nombres, apellidos, email, marca_vehiculo, modelo, year, kilometraje, telefonos, comentarios FROM datos";
           	$stmt = $con->prepare($sql);
           	$result = $stmt->execute();
           	$rows = $stmt->fetchAll(\PDO::FETCH_OBJ);
@@ -72,6 +73,7 @@ if(isset($_SESSION['user'])) {
                 <td><?php print($row->year); ?></td>
                 <td><?php print($row->kilometraje); ?></td>
                 <td><?php print($row->telefonos); ?></td>
+                <td><?php print($row->comentarios); ?></td>
                 <td>
                   <div class="btn-group">
                     <button type="button" class="btn btn-danger">Seleccione</button>
@@ -142,7 +144,13 @@ if(isset($_SESSION['user'])) {
                     <div class="form-group">
                       <label>Telefonos</label>
                       <input name="telefonos" class="form-control" >
-                    </div
+                  </div>
+
+                  <div class="form-group">
+                    <label>comentarios</label>
+                    <!-- <input name="comentarios" class="form-control" > -->
+                    <textarea name="comentarios" rows="8" cols="40" class="form-control"></textarea>
+                </div>
 
                     <button type="submit" value="submit" class="btn btn-info btn-lg">
                       <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Registrar

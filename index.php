@@ -130,17 +130,16 @@
                 <input name="telefonos" class="form-control" >
               </div>
 
-              <button type="submit" value="submit" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Registrar
+              <button type="submit" value="submit" class="btn btn-danger btn-lg">
+                <span  aria-hidden="true"></span> Registrar
               </button>
-
             </div>
         </fieldset>
       </form>
 
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger btn-circle" data-dismiss="modal"><i class="fa fa-times"></i>x</button>
+        <button type="button" class="btn btn-danger btn-circle" data-dismiss="modal"><i></i>x</button>
       </div>
     </div>
   </div>
@@ -299,60 +298,8 @@
     </div>
   </div>
 </div>
-<!-- Team Section -->
-<!-- <div id="team-section" class="text-center">
-  <div class="container">
-    <div class="section-title wow fadeInDown">
-      <h2>Nuestro <strong>Equipo</strong></h2>
-      <hr>
-      <div class="clearfix"></div>
-      <p>Contamos con las de 20 años de experiencia en el sector automotriz.</p>
-    </div>
 
 
-        <div class="thumbnail"> <img src="img/team/CEO.jpg" alt="..." class="img-circle">
-          <div class="caption">
-            <h3>Wilmer Pulido</h3>
-            <p>Fundador / Gerente General</p>
-                        <ul class="list-inline">
-              <li><a href="https://www.facebook.com/GestionAutomotrizJP1"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            </ul>
-          </div>
-        </div>
-
-
-  </div>
-</div> -->
-<!-- Testimonials Section -->
-<!-- <div id="testimonials-section" class="text-center">
-  <div class="container">
-    <div class="section-title wow fadeInDown">
-      <h2>¿Que dicen nuestro <strong>clientes</strong> ?</h2>
-      <hr>
-    </div>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <div id="testimonial" class="owl-carousel owl-theme wow fadeInUp" data-wow-delay="200ms">
-          <div class="item">
-            <p>Gestion automotriz me ayudo con la compra de mi carro, todo salio muy bien</p>
-            <p><strong>Manuel Romero.</strong> Renault logan </p>
-          </div>
-          <div class="item">
-            <p>Llame para pedir un servicio y en muy poco tiempo llegaron a donde estaba, arreglando mi vehiculo. Buen servicio</p>
-            <p><strong>Andres Hernandez.</strong> Aveo family </p>
-          </div>
-          <div class="item">
-            <p>Repararon mi vehuculo en tiempo record. gracias</p>
-            <p><strong>Andrea Salazar.</strong> Renault fluence</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- Contact Section -->
 <div id="contact-section" class="text-center">
   <div class="container">
     <div class="section-title wow fadeInDown">

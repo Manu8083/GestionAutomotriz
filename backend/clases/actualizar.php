@@ -7,11 +7,12 @@
 	$year = $_POST['year'];
 	$kilometraje = $_POST['kilometraje'];
 	$telefonos = $_POST['telefonos'];
+	$comentarios = $_POST['comentarios'];
 	$idP = $_POST['idP'];
 
 	require ('conexion.php');
 	$con = Conectar();
-	$sql = 'UPDATE  datos SET nombres=:nombres, apellidos=:apellidos, email=:email, marca_vehiculo=:marca_vehiculo, modelo=:modelo, year=:year, kilometraje=:kilometraje, telefonos=:telefonos WHERE id=:idPersona';
+	$sql = 'UPDATE  datos SET nombres=:nombres, apellidos=:apellidos, email=:email, marca_vehiculo=:marca_vehiculo, modelo=:modelo, year=:year, kilometraje=:kilometraje, telefonos=:telefonos, comentarios=:comentarios WHERE id=:idPersona';
 	$q = $con->prepare($sql);
-	$q->execute(array(':nombres'=>$nombres, ':apellidos'=>$apellidos, ':email'=>$email, ':marca_vehiculo'=>$marca_vehiculo, ':modelo'=>$modelo, ':year'=>$year, ':kilometraje'=>$kilometraje, ':telefonos'=>$telefonos, ':idPersona'=>$idP));
+	$q->execute(array(':nombres'=>$nombres, ':apellidos'=>$apellidos, ':email'=>$email, ':marca_vehiculo'=>$marca_vehiculo, ':modelo'=>$modelo, ':year'=>$year, ':kilometraje'=>$kilometraje, ':telefonos'=>$telefonos, ':comentarios'=>$comentarios, ':idPersona'=>$idP));
 ?>

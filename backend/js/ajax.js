@@ -25,6 +25,7 @@ function Registrar(idP, accion){
 	year = document.frmClientes.year.value;
 	kilometraje = document.frmClientes.kilometraje.value;
 	telefonos = document.frmClientes.telefonos.value;
+	comentarios = document.frmClientes.comentarios.value;
 
 	ajax = objetoAjax();
 
@@ -42,7 +43,7 @@ function Registrar(idP, accion){
 			}
 		}
 	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-	ajax.send("&nombres="+nombres+"&apellidos="+apellidos+"&email="+email+"&marca_vehiculo="+marca_vehiculo+"&modelo="+modelo+"&year="+year+"&kilometraje="+kilometraje+"&telefonos="+telefonos+"&idP="+idP);
+	ajax.send("&nombres="+nombres+"&apellidos="+apellidos+"&email="+email+"&marca_vehiculo="+marca_vehiculo+"&modelo="+modelo+"&year="+year+"&kilometraje="+kilometraje+"&telefonos="+telefonos+"&comentarios="+comentarios+"&idP="+idP);
 
 }
 
