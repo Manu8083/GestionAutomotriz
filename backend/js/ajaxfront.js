@@ -16,7 +16,7 @@ if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
 	}
 	return xmlhttp;
 }
-function Registrar(idP, accion){
+function RegistrarFront(){
 	nombres = document.frmClientes.nombres.value;
 	apellidos = document.frmClientes.apellidos.value;
 	email = document.frmClientes.email.value;
@@ -28,13 +28,7 @@ function Registrar(idP, accion){
 
 	ajax = objetoAjax();
 
-	if(accion=='N'){
-		ajax.open("POST","backend/clases/registrar.php",true);
-	}
-	else if(accion=='E'){
-		ajax.open("POST","clases/actualizar.php",true);
-	}
-
+	ajax.open("POST","backend/clases/registrarFront.php",true);
 		ajax.onreadystatechange=function(){
 			if (ajax.readyState==4){
 				alert('Los datos fueron guardados con exito');
@@ -42,23 +36,6 @@ function Registrar(idP, accion){
 			}
 		}
 	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-	ajax.send("&nombres="+nombres+"&apellidos="+apellidos+"&email="+email+"&marca_vehiculo="+marca_vehiculo+"&modelo="+modelo+"&year="+year+"&kilometraje="+kilometraje+"&telefonos="+telefonos+"&idP="+idP);
-
-}
-
-function eliminar(idP){
-	if (confirm("En realidad quieres eliminar este registro")) {
-		ajax = objetoAjax();
-		ajax.open("POST","clases/eliminar.php",true);
-		ajax.onreadystatechange=function(){
-			if (ajax.readyState==4){
-				alert('El registro se elimino con exito');
-				window.location.reload(true);
-			}
-		}
-	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-	ajax.send("&idP="+idP);
-}else {
-	// sin acciones
-}
+	ajax.send("&nombres="+nombres+"&apellidos="+apellidos+"&email="+email+"&marca_vehiculo="+marca_vehiculo+"&modelo="+modelo+"&year="+year+"&kilometraje="+kilometraje+"&telefonos="+telefonos);
+	Ajax.setRequestHeader("Connection","close");
 }

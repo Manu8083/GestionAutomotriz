@@ -149,7 +149,7 @@ if(isset($_SESSION['user'])) {
                   <div class="form-group">
                     <label>comentarios</label>
                     <!-- <input name="comentarios" class="form-control" > -->
-                    <textarea name="comentarios" rows="8" cols="40" class="form-control"></textarea>
+                    <textarea name="comentarios" rows="8" cols="40" class="form-control" maxlength="250"></textarea>
                 </div>
 
                     <button type="submit" value="submit" class="btn btn-info btn-lg">

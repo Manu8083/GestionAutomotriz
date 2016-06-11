@@ -29,3 +29,19 @@ function Editar(id,nombres,apellidos,email,marca_vehiculo,modelo,year,kilometraj
 
 	$('#modal').modal('show')
 }
+function NuevoFront(){
+	accion = 'N';
+	document.frmClientes.nombres.value = "";
+	document.frmClientes.apellidos.value = "";
+	document.frmClientes.email.value = "";
+	document.frmClientes.marca_vehiculo.value = "";
+	document.frmClientes.modelo.value = "";
+	document.frmClientes.year.value = "";
+	document.frmClientes.kilometraje.value = "";
+	document.frmClientes.telefonos.value = "";
+	$('#modal').modal('show');
+	$('#modal').show()
+}
+function CloseWindows() {
+	$('#modal').hide()
+}
