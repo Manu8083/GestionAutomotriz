@@ -11,9 +11,10 @@ function Nuevo(){
 	document.frmClientes.year.value = "";
 	document.frmClientes.kilometraje.value = "";
 	document.frmClientes.telefonos.value = "";
+	document.frmClientes.comentarios.value = "";
 	$('#modal').modal('show');
 }
-function Editar(id,nombres,apellidos,email,marca_vehiculo,modelo,year,kilometraje,telefonos){
+function Editar(id,nombres,apellidos,email,marca_vehiculo,modelo,year,kilometraje,telefonos,comentarios){
 	accion = 'E';
 	idP = id;
 	document.frmClientes.nombres.value = nombres;
@@ -24,7 +25,7 @@ function Editar(id,nombres,apellidos,email,marca_vehiculo,modelo,year,kilometraj
 	document.frmClientes.year.value = year;
 	document.frmClientes.kilometraje.value = kilometraje;
 	document.frmClientes.telefonos.value = telefonos;
-
+	document.frmClientes.comentarios.value = comentarios;
 
 	$('#modal').modal('show')
 }

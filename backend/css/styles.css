@@ -40,3 +40,20 @@ button.logout{
     background-color: #a4a3a1;
     border-color: #a4a3a1;
 }
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    max-width: 310px;
+}
+.panel{
+    overflow-x: scroll;
+    width: 108%;
+    min-width: 90%;
+    max-width: 120%;
+    margin-left: -6%;
+}
+.table{
+    width: 105%;
+    max-width: 110%;
+}
+.panel-default>.panel-heading{
+    width: 105%;
+}

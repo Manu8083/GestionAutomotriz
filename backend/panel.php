@@ -73,7 +73,7 @@ if(isset($_SESSION['user'])) {
                 <td><?php print($row->year); ?></td>
                 <td><?php print($row->kilometraje); ?></td>
                 <td><?php print($row->telefonos); ?></td>
-                <td><?php print($row->comentarios); ?></td>
+                <td  class="comentarios"><?php print($row->comentarios); ?></td>
                 <td>
                   <div class="btn-group">
                     <button type="button" class="btn btn-danger">Seleccione</button>
@@ -82,7 +82,7 @@ if(isset($_SESSION['user'])) {
                     </button>
                     <ul class="dropdown-menu" role="menu">
                       <li><a class="glyphicon glyphicon-trash" aria-hidden="true" onclick="eliminar('<?php print($row->id); ?>')">Eliminar</a></li>
-                      <li><a class="glyphicon glyphicon-wrench" aria-hidden="true" onclick="Editar('<?php print($row->id); ?>','<?php print($row->nombres); ?>','<?php print($row->apellidos); ?>','<?php print($row->email); ?>','<?php print($row->marca_vehiculo); ?>','<?php print($row->modelo); ?>','<?php print($row->year); ?>','<?php print($row->kilometraje); ?>','<?php print($row->telefonos); ?>');">Actualizar</a></li>
+                      <li><a class="glyphicon glyphicon-wrench" aria-hidden="true" onclick="Editar('<?php print($row->id); ?>','<?php print($row->nombres); ?>','<?php print($row->apellidos); ?>','<?php print($row->email); ?>','<?php print($row->marca_vehiculo); ?>','<?php print($row->modelo); ?>','<?php print($row->year); ?>','<?php print($row->kilometraje); ?>','<?php print($row->telefonos); ?>','<?php print($row->comentarios); ?>');">Actualizar</a></li>
                     </ul>
                   </div>
                 </td>
