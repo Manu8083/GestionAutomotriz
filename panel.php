@@ -1,7 +1,6 @@
 <?php
 session_start();
 include 'clases/conexion2.php';
-
 if(isset($_SESSION['user'])) {
     ?>
 
@@ -14,6 +13,8 @@ if(isset($_SESSION['user'])) {
   <title></title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="fonts/fonts/glyphicons-halflings-regular.woff">
+
   <script type="text/javascript" src="js/ajax.js"></script>
   <script src="js/jquery.min.js"></script>
 
@@ -29,7 +30,7 @@ if(isset($_SESSION['user'])) {
     </nav>
     <div class="container">
       <div class="starter-template">
-        <img src="../img/GestionLogo.jpg" alt="GestionAutomotriz" />
+        <img src="img/GestionLogo.jpg" alt="GestionAutomotriz" />
         <p class="lead">Aplicación gestión de clientes</p>
         <button type="button" onclick="Nuevo();" class="btn btn-primary btn-lg" >
           <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Nuevo Cliente
@@ -40,7 +41,6 @@ if(isset($_SESSION['user'])) {
         <table class="table">
           <thead>
             <tr>
-              <th>#</th>
               <th>Nombres</th>
               <th>Apellidos</th>
               <th>Email</th>
@@ -64,7 +64,7 @@ if(isset($_SESSION['user'])) {
           	foreach ($rows as $row) {
           ?>
 			<tr>
-                <th scope="row"><?php print($row->id); ?></th>
+
                 <td><?php print($row->nombres); ?></td>
                 <td><?php print($row->apellidos); ?></td>
                 <td><?php print($row->email); ?></td>
@@ -76,14 +76,8 @@ if(isset($_SESSION['user'])) {
                 <td  class="comentarios"><?php print($row->comentarios); ?></td>
                 <td>
                   <div class="btn-group">
-                    <button type="button" class="btn btn-danger">Seleccione</button>
-                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a class="glyphicon glyphicon-trash" aria-hidden="true" onclick="eliminar('<?php print($row->id); ?>')">Eliminar</a></li>
-                      <li><a class="glyphicon glyphicon-wrench" aria-hidden="true" onclick="Editar('<?php print($row->id); ?>','<?php print($row->nombres); ?>','<?php print($row->apellidos); ?>','<?php print($row->email); ?>','<?php print($row->marca_vehiculo); ?>','<?php print($row->modelo); ?>','<?php print($row->year); ?>','<?php print($row->kilometraje); ?>','<?php print($row->telefonos); ?>','<?php print($row->comentarios); ?>');">Actualizar</a></li>
-                    </ul>
+                      <a class="glyphicon glyphicon-trash btnOptions" aria-hidden="true" onclick="eliminar('<?php print($row->id); ?>')"></a>
+                      <a class="glyphicon glyphicon-wrench btnOptions" aria-hidden="true" onclick="Editar('<?php print($row->id); ?>','<?php print($row->nombres); ?>','<?php print($row->apellidos); ?>','<?php print($row->email); ?>','<?php print($row->marca_vehiculo); ?>','<?php print($row->modelo); ?>','<?php print($row->year); ?>','<?php print($row->kilometraje); ?>','<?php print($row->telefonos); ?>','<?php print($row->comentarios); ?>');"></a>
                   </div>
                 </td>
               </tr>

@@ -7,15 +7,12 @@
 	$year= $_POST['year'];
 	$kilometraje = $_POST['kilometraje'];
 	$telefonos = $_POST['telefonos'];
-	$comentarios = $_POST['comentarios'];
-
-
 
 	require ('conexion.php');
 	$con = Conectar();
-	$sql = 'INSERT INTO datos (nombres, apellidos, email, marca_vehiculo, modelo, year, kilometraje, telefonos, comentarios) VALUES (:nombres, :apellidos, :email, :marca_vehiculo, :modelo, :year, :kilometraje, :telefonos, :comentarios)';
+	$sql = 'INSERT INTO datos (nombres, apellidos, email, marca_vehiculo, modelo, year, kilometraje, telefonos) VALUES (:nombres, :apellidos, :email, :marca_vehiculo, :modelo, :year, :kilometraje, :telefonos)';
 	$q = $con->prepare($sql);
-	$q->execute(array(':nombres'=>$nombres, ':apellidos'=>$apellidos, ':email'=>$email, ':marca_vehiculo'=>$marca_vehiculo, ':modelo'=>$modelo, ':year'=>$year, ':kilometraje'=>$kilometraje, ':telefonos'=>$telefonos, ':comentarios'=>$comentarios));
+	$q->execute(array(':nombres'=>$nombres, ':apellidos'=>$apellidos, ':email'=>$email, ':marca_vehiculo'=>$marca_vehiculo, ':modelo'=>$modelo, ':year'=>$year, ':kilometraje'=>$kilometraje, ':telefonos'=>$telefonos));
 
 	if (isset($_POST["submit"])) {
 		$nombres = trim(htmlentities(mysql_real_escape_string($_POST["nombres"])));
@@ -26,8 +23,7 @@
 		$year = trim(htmlentities(mysql_real_escape_string($_POST["year"])));
 		$kilometraje = trim(htmlentities(mysql_real_escape_string($_POST["kilometraje"])));
 		$telefonos = trim(htmlentities(mysql_real_escape_string($_POST["telefonos"])));
-		$comentarios = trim(htmlentities(mysql_real_escape_string($_POST["comentarios"])));
-
+		
 		$response = array();
 	}
  ?>

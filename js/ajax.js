@@ -16,7 +16,7 @@ if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
 	}
 	return xmlhttp;
 }
-function RegistrarFront(accion){
+function Registrar(idP, accion){
 	nombres = document.frmClientes.nombres.value;
 	apellidos = document.frmClientes.apellidos.value;
 	email = document.frmClientes.email.value;
@@ -25,14 +25,18 @@ function RegistrarFront(accion){
 	year = document.frmClientes.year.value;
 	kilometraje = document.frmClientes.kilometraje.value;
 	telefonos = document.frmClientes.telefonos.value;
+	comentarios = document.frmClientes.comentarios.value;
 
-	ajax =  objetoAjax();
+	ajax = objetoAjax();
 
 	if(accion=='N'){
-		ajax.open("POST","../clases/registrarFront.php",true);
+		ajax.open("POST","clases/registrarFront.php",true);
 	}
 	else if(accion=='E'){
 		ajax.open("POST","clases/actualizar.php",true);
+	}
+	else {
+		alert('no se guardados')
 	}
 
 		ajax.onreadystatechange=function(){
@@ -41,8 +45,24 @@ function RegistrarFront(accion){
 				window.location.reload(true);
 			}
 		}
-
 	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-	ajax.send("&nombres="+nombres+"&apellidos="+apellidos+"&email="+email+"&marca_vehiculo="+marca_vehiculo+"&modelo="+modelo+"&year="+year+"&kilometraje="+kilometraje+"&telefonos="+telefonos);
-	ajax.setRequestHeader("Connection","close");
+	ajax.send("&nombres="+nombres+"&apellidos="+apellidos+"&email="+email+"&marca_vehiculo="+marca_vehiculo+"&modelo="+modelo+"&year="+year+"&kilometraje="+kilometraje+"&telefonos="+telefonos+"&comentarios="+comentarios+"&idP="+idP);
+
+}
+
+function eliminar(idP){
+	if (confirm("En realidad quieres eliminar este registro")) {
+		ajax = objetoAjax();
+		ajax.open("POST","clases/eliminar.php",true);
+		ajax.onreadystatechange=function(){
+			if (ajax.readyState==4){
+				alert('El registro se elimino con exito');
+				window.location.reload(true);
+			}
+		}
+	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	ajax.send("&idP="+idP);
+}else {
+	// sin acciones
+}
 }

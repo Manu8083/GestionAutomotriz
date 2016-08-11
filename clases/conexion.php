@@ -3,8 +3,8 @@
 		$conn = null;
 		$host = 'localhost';
 		$db = 'gestio1_automotriz';
-		// $user = 'gestio1';
-		// $pwd = 'fKTIz1pjakv3q_x';
+		//$user = 'gestio1';
+		//$pwd = 'fKTIz1pjakv3q_x';
 		$user = 'root';
 		$pwd = 'root';
 		try {

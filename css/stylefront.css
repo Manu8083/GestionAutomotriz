@@ -627,6 +627,10 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #footer p {
 	margin-top: 10px;
 }
+.modal-backdrop{
+	background-color: none;
+	z-index: none;
+}
 
 @media (max-width: 768px) {
 .content {

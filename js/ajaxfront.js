@@ -16,7 +16,9 @@ if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
 	}
 	return xmlhttp;
 }
+
 function RegistrarFront(accion){
+	accion.preventDefault()
 	nombres = document.frmClientes.nombres.value;
 	apellidos = document.frmClientes.apellidos.value;
 	email = document.frmClientes.email.value;
@@ -29,12 +31,11 @@ function RegistrarFront(accion){
 	ajax =  objetoAjax();
 
 	if(accion=='N'){
-		ajax.open("POST","../clases/registrarFront.php",true);
+		ajax.open("POST","clases/registrarFront.php",true);
 	}
 	else if(accion=='E'){
 		ajax.open("POST","clases/actualizar.php",true);
 	}
-
 		ajax.onreadystatechange=function(){
 			if (ajax.readyState==4){
 				alert('Los datos fueron guardados con exito');

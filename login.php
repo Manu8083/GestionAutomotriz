@@ -18,12 +18,12 @@ if (isset($_POST['login'])) {
     <head>
         <meta charset="utf-8">
         <title></title>
-        <link rel="stylesheet" type="text/css"  href="../css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css"  href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
     </head>
     <body>
         <center>
-            <img src="../img/GestionLogo.jpg" alt="GestionAutomotriz" style="width:30%;"/>
+            <img src="img/GestionLogo.jpg" alt="GestionAutomotriz" style="width:30%;"/>
             <h2>Iniciar Seción</h2>
             <strong><?php echo $mensaje; ?></strong>
             <div style="width:30%;">
@@ -39,6 +39,6 @@ if (isset($_POST['login'])) {
                     </form>
             </div>
         </center>
-        <script type="text/javascript" href="../../js/bootstrap.min.js"></script>
+        <script type="text/javascript" href="js/bootstrap.min.js"></script>
     </body>
 </html>

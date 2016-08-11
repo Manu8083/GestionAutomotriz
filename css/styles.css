@@ -56,3 +56,14 @@ button.logout{
 .panel-default>.panel-heading{
     width: 110%;
 }
+
+.btnOptions{
+    color: red;
+    text-decoration: none;
+    margin-left: 16px;
+}
+
+.btnOptions:hover{
+    color: gray;
+    text-decoration: none;
+}

@@ -22,16 +22,16 @@
     ================================================== -->
 <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
 <link href="css/owl.theme.css" rel="stylesheet" media="screen">
-
 <!-- Stylesheet
     ================================================== -->
 
-<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css"  href="css/stylefront.css">
 <link rel="stylesheet" type="text/css" href="css/animate.min.css">
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
-<script type="text/javascript" src="backend/js/ajaxFront.js"></script>
+<script type="text/javascript" src="js/ajaxfront.js"></script>
+<script src="js/jquery.min.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,9 +41,9 @@
     <![endif]-->
 </head>
 <body>
-<div id="preloader">
+<!-- <div id="preloader">
   <div id="status"> <img src="img/preloader.gif" height="64" width="64" alt=""> </div>
-</div>
+</div> -->
 <!-- Navigation
     ==========================================-->
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
@@ -61,7 +61,7 @@
         <li><a href="#works-section" class="page-scroll">Servicios</a></li>
         <li><a href="#about-section" class="page-scroll">Nosotros</a></li>
         <li><a href="#contact-section" class="page-scroll">Contacto</a></li>
-        <li><a href="backend/login.php" class="page-scroll">Admin</a></li>
+        <li><a href="login.php" class="page-scroll">Admin</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -78,17 +78,17 @@
 </header>
 
 
-<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal" id="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title">Nuevo Cliente </h4>
       </div>
       <!-- //formulario -->
 
 
-      <form role="form" action="" id="FormData" name="frmClientes" onsubmit="RegistrarFront();">
+      <form role="form" action="" id="FormData" name="frmClientes" onsubmit="RegistrarFront(accion); return false">
           <fieldset>
             <div class="col-lg-12">
               <div class="form-group">
@@ -103,39 +103,39 @@
 
               <div class="form-group">
                 <label>Email</label>
-                <input name="email" class="form-control" >
+                <input name="email" class="form-control" required>
               </div>
 
               <div class="form-group">
                 <label>Marca del vehiculo</label>
-                <input name="marca_vehiculo" class="form-control" >
+                <input name="marca_vehiculo" class="form-control" required>
               </div>
 
               <div class="form-group">
                 <label>Modelo</label>
-                <input name="modelo" class="form-control" >
+                <input name="modelo" class="form-control" required>
               </div>
 
               <div class="form-group">
                 <label>Año</label>
-                <input name="year" class="form-control" >
+                <input name="year" class="form-control" required>
               </div>
               <div class="form-group">
                 <label>Kilimetraje</label>
-                <input name="kilometraje" class="form-control" >
+                <input name="kilometraje" class="form-control" required>
               </div>
 
               <div class="form-group">
                 <label>Telefonos</label>
-                <input name="telefonos" class="form-control" >
+                <input name="telefonos" class="form-control" required>
               </div>
 
               <button type="submit" value="submit" class="btn btn-danger btn-lg">
                 <span  aria-hidden="true"></span> Registrar
               </button>
-              <a href="#contact-section" onclick="CloseWindows()" class="btn btn-danger btn-lg">
+              <div href="#contact-section" onclick="CloseWindows()" class="btn btn-danger btn-lg">
                 <span  aria-hidden="true"></span> Enviar Mensaje
-            </a>
+            </div>
             </div>
         </fieldset>
       </form>
@@ -147,8 +147,6 @@
     </div>
   </div>
 </div>
-
-
 
 
 
@@ -609,15 +607,15 @@
     </div>
   </div>
 </div>
-<script type="text/javascript" src="backend/js/codigo.js"></script>
+
+<script type="text/javascript" src="js/codigo.js"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/SmoothScroll.js"></script>
 <script type="text/javascript" src="js/wow.min.js"></script>
-<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
 <script type="text/javascript" src="js/jquery.isotope.js"></script>
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
 <script type="text/javascript" src="js/contact_me.js"></script>
