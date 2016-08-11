@@ -18,7 +18,6 @@ if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
 }
 
 function RegistrarFront(accion){
-	accion.preventDefault()
 	nombres = document.frmClientes.nombres.value;
 	apellidos = document.frmClientes.apellidos.value;
 	email = document.frmClientes.email.value;
