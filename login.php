@@ -24,7 +24,7 @@ if (isset($_POST['login'])) {
     <body>
         <center>
             <img src="img/GestionLogo.jpg" alt="GestionAutomotriz" style="width:30%;"/>
-            <h2>Iniciar Seción</h2>
+            <h2>Iniciar Sesión</h2>
             <strong><?php echo $mensaje; ?></strong>
             <div style="width:30%;">
                     <form class="form-horizontal" method="POST" action='<?php echo $_SERVER['PHP_SELF']; ?>'>
@@ -35,7 +35,7 @@ if (isset($_POST['login'])) {
                            <input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
                          </div>
                          <input type="hidden" name="login">
-                         <button type="submit" class="btn btn-default">Iniciar Sección</button>
+                         <button type="submit" class="btn btn-default">Iniciar Sesión</button>
                     </form>
             </div>
         </center>
