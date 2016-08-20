@@ -30,13 +30,13 @@ function Registrar(idP, accion){
 	ajax = objetoAjax();
 
 	if(accion=='N'){
-		ajax.open("POST","clases/registrarFront.php",true);
+		ajax.open("POST","clases/registrar.php",true);
 	}
 	else if(accion=='E'){
 		ajax.open("POST","clases/actualizar.php",true);
 	}
 	else {
-		alert('no se guardados')
+		alert('no se guardados');
 	}
 
 		ajax.onreadystatechange=function(){
@@ -47,7 +47,7 @@ function Registrar(idP, accion){
 		}
 	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 	ajax.send("&nombres="+nombres+"&apellidos="+apellidos+"&email="+email+"&marca_vehiculo="+marca_vehiculo+"&modelo="+modelo+"&year="+year+"&kilometraje="+kilometraje+"&telefonos="+telefonos+"&comentarios="+comentarios+"&idP="+idP);
-
+	ajax.setRequestHeader("Connection","close");
 }
 
 function eliminar(idP){

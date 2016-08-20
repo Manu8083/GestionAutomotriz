@@ -30,7 +30,7 @@
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
-<script type="text/javascript" src="js/ajaxfront.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
 <script src="js/jquery.min.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -74,7 +74,7 @@
   <div class="intro-text">
     <h1 class="wow fadeInDown">Gestion Automotriz <strong><span class="color">JP</span></strong></h1>
     <p class="wow fadeInDown">Compormetidos con su tiempo</p>
-    <a onclick="NuevoFront();" class="btn btn-default btn-lg page-scroll wow fadeInUp" data-wow-delay="200ms">Solicitar Servicio</a> </div>
+    <a onclick="Nuevo();" class="btn btn-default btn-lg page-scroll wow fadeInUp" data-wow-delay="200ms">Solicitar Servicio</a> </div>
 </header>
 
 
@@ -88,7 +88,7 @@
       <!-- //formulario -->
 
 
-      <form role="form" action="" id="FormData" name="frmClientes" onsubmit="RegistrarFront(accion);">
+      <form role="form" action="" id="FormData" name="frmClientes" onsubmit="Registrar(idP,accion); return false">
           <fieldset>
             <div class="col-lg-12">
               <div class="form-group">
@@ -129,6 +129,12 @@
                 <label>Telefonos</label>
                 <input name="telefonos" class="form-control" required>
               </div>
+
+              <div class="form-group">
+                <label>comentarios</label>
+                <!-- <input name="comentarios" class="form-control" > -->
+                <textarea name="comentarios" rows="8" cols="40" class="form-control" maxlength="250"></textarea>
+            </div>
 
               <button type="submit" value="submit" class="btn btn-danger btn-lg">
                 <span  aria-hidden="true"></span> Registrar
@@ -617,7 +623,7 @@
 <script type="text/javascript" src="js/SmoothScroll.js"></script>
 <script type="text/javascript" src="js/wow.min.js"></script>
 <script type="text/javascript" src="js/jquery.isotope.js"></script>
-<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+<!-- <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> -->
 <script type="text/javascript" src="js/contact_me.js"></script>
 <script type="text/javascript" src="js/owl.carousel.js"></script>
 
