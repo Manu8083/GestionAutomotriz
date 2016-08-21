@@ -14,8 +14,8 @@ $email_address = $_POST['email'];
 $message = $_POST['message'];
 
 // Create the email and send the message
-$to = 'gerencia@gestionautomotriz.co'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Website Contact Form:  $name";
+$to = 'servicio@gestionautomotriz.co'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
+$email_subject = "Nuevo mail:  $name";
 $email_body = "Alguien te dejo un mensaje\n\n"."Aqui los detalles:\n\nNombre: $name\n\nEmail: $email_address\n\nMensaje:\n$message";
 $headers = "From: gestionautomotriz.co\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: $email_address";

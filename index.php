@@ -73,7 +73,7 @@
 <header class="text-center" name="home">
   <div class="intro-text">
     <h1 class="wow fadeInDown">Gestion Automotriz <strong><span class="color">JP</span></strong></h1>
-    <p class="wow fadeInDown">Compormetidos con su tiempo</p>
+    <p class="wow fadeInDown">Comprometidos con su tiempo</p>
     <a onclick="Nuevo();" class="btn btn-default btn-lg page-scroll wow fadeInUp" data-wow-delay="200ms">Solicitar Servicio</a> </div>
 </header>
 
@@ -90,7 +90,7 @@
 
       <form role="form" action="" id="FormData" name="frmClientes" onsubmit="Registrar(idP,accion); return false">
           <fieldset>
-            <div class="col-lg-12">
+            <div class="col-lg-12 scroll-form">
               <div class="form-group">
                 <label>Nombre</label>
                 <input name="nombres" id="nombres" class="form-control" required>
@@ -101,47 +101,48 @@
                 <input name="apellidos"  class="form-control" required>
               </div>
 
-              <div class="form-group">
+              <div class="form-group col-lg-6">
                 <label>Email</label>
                 <input name="email" class="form-control" required>
               </div>
 
-              <div class="form-group">
-                <label>Marca del vehiculo</label>
-                <input name="marca_vehiculo" class="form-control" required>
-              </div>
-
-              <div class="form-group">
-                <label>Modelo</label>
-                <input name="modelo" class="form-control" required>
-              </div>
-
-              <div class="form-group">
-                <label>Año</label>
-                <input name="year" class="form-control" required>
-              </div>
-              <div class="form-group">
-                <label>Kilimetraje</label>
-                <input name="kilometraje" class="form-control" required>
-              </div>
-
-              <div class="form-group">
+              <div class="form-group col-lg-6">
                 <label>Telefonos</label>
                 <input name="telefonos" class="form-control" required>
               </div>
 
+              <div class="form-group col-lg-6">
+                <label>Marca del vehiculo</label>
+                <input name="marca_vehiculo" class="form-control" required>
+              </div>
+
+              <div class="form-group col-lg-6">
+                <label>Linea</label>
+                <input name="modelo" class="form-control" required>
+              </div>
+
+              <div class="form-group col-lg-6">
+                <label>Año</label>
+                <input name="year" class="form-control" required>
+              </div>
+              <div class="form-group col-lg-6">
+                <label>Kilimetraje</label>
+                <input name="kilometraje" class="form-control" required>
+              </div>
               <div class="form-group">
                 <label>comentarios</label>
-                <!-- <input name="comentarios" class="form-control" > -->
-                <textarea name="comentarios" rows="8" cols="40" class="form-control" maxlength="250"></textarea>
+                <textarea name="comentarios" placeholder="Describa su servicio" rows="8" cols="40" class="form-control" maxlength="250" required></textarea>
             </div>
+            <center>
+            <input type="radio" name="terminos" value="terminosAceptados" required> Acepto recibir informacion a mi correo electronico o celular.<br>
+            <br>
+            </center>
 
               <button type="submit" value="submit" class="btn btn-danger btn-lg">
                 <span  aria-hidden="true"></span> Registrar
               </button>
-              <div href="#contact-section" onclick="CloseWindows()" class="btn btn-danger btn-lg">
-                <span  aria-hidden="true"></span> Enviar Mensaje
-            </div>
+
+
             </div>
         </fieldset>
       </form>
@@ -159,10 +160,10 @@
 <div id="works-section" class="text-center">
   <div class="container"> <!-- Container -->
     <div class="section-title wow fadeInDown">
-      <h2>Nuestros <strong>Servicios</strong></h2>
+      <h2><strong>Nuestros Servicios</strong></h2>
       <hr>
       <div class="clearfix"></div>
-      <p>Pensando en nuestros clientes ofrecemos esta clase de servicios para facilitarle cualquier tramite o diligencia que por falta de tiempo no pueda realizar,acompañándolo así en la toma de buenas decisiones para usted y su familia</p>
+      <p>Pensando en nuestros clientes ofrecemos esta clase de servicios para facilitarle cualquier tramite o diligencia que por falta de tiempo no pueda realizar,acompañándolo así en la toma de buenas decisiones para usted y su familia.</p>
     </div>
     <div class="categories">
       <ul class="cat">
@@ -183,7 +184,7 @@
           <div class="portfolio-item wow fadeInUp" data-wow-delay="200ms">
             <div class="hover-bg"> <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
               <div class="hover-text">
-                <h4>Mantenimiento preventivo a domicilio.</h4>
+                <h4>Cambio de Aceite y Mantenimiento Preventivo a Domicilio.</h4>
                 <div class="clearfix"></div>
                 <i class="fa fa-plus"></i> </div>
               <img src="img/portfolio/01.jpg" class="img-responsive" alt="Project Title"> </a> </div>
@@ -193,7 +194,7 @@
           <div class="portfolio-item wow fadeInUp" data-wow-delay="400ms">
             <div class="hover-bg"> <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
               <div class="hover-text">
-                <h4>Mecánica especializada.</h4>
+                <h4>Mecánica Especializada.</h4>
                 <div class="clearfix"></div>
                 <i class="fa fa-plus"></i> </div>
               <img src="img/portfolio/02.jpg" class="img-responsive" alt="Project Title"> </a> </div>
@@ -203,17 +204,17 @@
           <div class="portfolio-item wow fadeInUp" data-wow-delay="600ms">
             <div class="hover-bg"> <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
               <div class="hover-text">
-                <h4>Accesorios y Seguros</h4>
+                <h4>Lujos y Accesorios</h4>
                 <div class="clearfix"></div>
                 <i class="fa fa-plus"></i> </div>
-              <img src="img/portfolio/03.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/portfolio/lujos.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 col-lg-4 Preventivos">
           <div class="portfolio-item wow fadeInUp" data-wow-delay="800ms">
             <div class="hover-bg"> <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
               <div class="hover-text">
-                <h4>Lamina y pintura</h4>
+                <h4>Lamina y Pintura</h4>
                 <div class="clearfix"></div>
                 <i class="fa fa-plus"></i> </div>
               <img src="img/portfolio/04.jpg" class="img-responsive" alt="Project Title"> </a> </div>
@@ -223,7 +224,7 @@
           <div class="portfolio-item wow fadeInUp" data-wow-delay="1000ms">
             <div class="hover-bg"> <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
               <div class="hover-text">
-                <h4>Peritaje a domicilio</h4>
+                <h4>Peritaje a Domicilio</h4>
                 <div class="clearfix"></div>
                 <i class="fa fa-plus"></i> </div>
               <img src="img/portfolio/05.jpg" class="img-responsive" alt="Project Title"> </a> </div>
@@ -233,7 +234,7 @@
           <div class="portfolio-item wow fadeInUp" data-wow-delay="1200ms">
             <div class="hover-bg"> <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
               <div class="hover-text">
-                <h4>Asesoría en compra de vehículo nuevo o usado</h4>
+                <h4>Asesoría en Compra y Venta <br> De Vehículos</h4>
                 <div class="clearfix"></div>
                 <i class="fa fa-plus"></i> </div>
               <img src="img/portfolio/06.jpg" class="img-responsive" alt="Project Title"> </a> </div>
@@ -256,13 +257,10 @@
       <div class="col-md-6 wow fadeInLeft">
 
             <center>
-              <div class="thumbnail"> <img src="img/team/CEO.jpg" alt="..." class="img-circle team-img">
+              <div class="thumbnail"> <img src="img/GestionLogo.jpg" alt="..." class="img-circle team-img">
                 <div class="caption">
-                  <h3>Wilmer Pulido</h3>
-                  <p>Cuento con 5 años de experiencia en el sector automotriz. <br>Este seguro que su vehiculo esta en las mejores manos</p>
-                  <p>Fundador / Gerente General</p>
-
-                      <a href="https://www.facebook.com/GestionAutomotrizJP1"><i class="fa fa-facebook"></i> </a>
+                  <p>Somos una empresa con mas de <b>10 años</b> de experiencia en el sector automotriz, contamos con personal altamente calificado y equipos especializado para brindar siempre un mejor servicio o asesoria segun la necesidad de nuestros clientes.</p>
+                      <a href="https://www.facebook.com/GestionAutomotrizJP1" target="_blank"><i class="fa fa-facebook-square fa-2x"></i> </a>
 
                 </div>
               </div>
@@ -271,30 +269,28 @@
 
     </div>
       <div class="col-md-6 wow fadeInRight">
-          <h4>Mision</h4>
+          <h4><strong>Mision</strong></h4>
           <p>Gestión automotriz es una empresa comprometida en brindar soluciones efectivas y
                 de calidad a sus clientes, pensando siempre en el acompañamiento y respuesta rápida
                 en los temas relacionados con sus vehículos , ofreciendo así servicios innovadores que
                 garantizan al cliente mejor aprovechamiento de su tiempo.</p>
           <div class="space"></div>
-          <h4>Vision</h4>
+          <h4><strong>Vision</strong></h4>
           <p>Ser una empresa líder a nivel nacional, manteniendo excelentes niveles de calidad y
             servicio para nuestros clientes.</p>
           <div class="space"></div><div class="list-style">
             <div class="row">
               <div class="col-lg-6 col-sm-6 col-xs-12">
                 <ul>
-                  <li>Servicios desde $80.000</li>
-                  <li>Nos Acomodamos a su tiempo </li>
-                  <li>Sin Contratiempos</li>
-                  <li>Personal Capacitado</li>
+                <li>Responsabilidad y cumplimiento</li>
+                <li>Asesoria automotriz</li>
+                <li>Personal Capacitado</li>
                 </ul>
               </div>
               <div class="col-lg-6 col-sm-6 col-xs-12">
                 <ul>
-                  <li>Asesoria automotriz</li>
-                  <li>Descuentos</li>
-                  <li>24 horas</li>
+                    <li>Nos Acomodamos a su tiempo </li>
+                    <li>Precios Cómodos</li>
                 </ul>
               </div>
             </div>
@@ -310,17 +306,18 @@
     <div class="section-title wow fadeInDown">
       <h2><strong>Contacto</strong></h2>
       <hr>
-      <p>Dejanos tu mensaje, entraremos en contacto lo mas pronto posible</p>
+      <p>Dejanos tu mensaje, entraremos en contacto lo mas pronto posible.</p>
     </div>
     <div class="col-md-8 col-md-offset-2 wow fadeInUp" data-wow-delay="200ms">
       <div class="col-md-4"> <i class="fa fa-map-marker fa-2x"></i>
-        <p>Tu lugar de preferencia</p>
+        <p class="font-contact">Tu lugar de preferencia</p>
       </div>
       <div class="col-md-4"> <i class="fa fa-envelope-o fa-2x"></i>
-        <p>gerencia@gestionautomotriz.co</p>
+        <p class="font-contact">servicio@gestionautomotriz.co</p>
       </div>
-      <div class="col-md-4"> <i class="fa fa-phone fa-2x"></i>
-        <p>315-614-2071</p>
+      <div class="col-md-4"> <i class="fa fa-whatsapp fa-2x"></i>
+        <p class="font-contact">315 614 2071 - 313 818 8501</p>
+        <p></p>
       </div>
       <div class="clearfix"></div>
     </div>
@@ -384,7 +381,7 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body">
             <!-- Project Details Go Here -->
-            <h2>Mantenimiento preventivo a domicilio.</h2>
+            <h2>Cambio de Aceite y Mantenimiento Preventivo a Domicilio.</h2>
             <img class="img-responsive img-centered" src="img/portfolio/01.jpg" alt="">
             <p style="font-size:15px; text-align: justify;">Sabemos que la falta de tiempo es causa de no realizar los mantenimientos para su
                 vehículo en el momento y kilometraje indicado, por eso ofrecemos un servicio
@@ -395,7 +392,7 @@
                 <br>
                 Tan solo con una llamada puede solicitar un técnico especializado quien lo atenderá
                 para realizar cambio de aceite, revisión de frenos, revisiones eléctricas y ajustes
-                básicos en el lugar de su elección sea casa, oficina o negocio, si necesidad de perder
+                básicos en el lugar de su elección sea casa, oficina o negocio, sin necesidad de perder
                 tiempo, pasar por incomodidades o simplemente sacrificar su descanso.
             </p>
             <li class="list-inline" style="text-align: left;">
@@ -410,7 +407,7 @@
               <ul>- Remplazo Filtro Aire Acondicionado</ul>
               <ul>- Revisión y Carga de Aire Acondicionado</ul>
               <ul>- Baterías</ul>
-              <ul><strong>Estos servicios y mas tan solo desde $80.000 pesos, en el lugar de su elección.</strong></ul>
+              <ul><strong>Estos servicios y mas, En el lugar de su elección.</strong></ul>
           </li>
             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
           </div>
@@ -432,7 +429,7 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body">
             <!-- Project Details Go Here -->
-            <h2>Mecánica especializada.</h2>
+            <h2>Mecánica Especializada.</h2>
             <img class="img-responsive img-centered" src="img/portfolio/02.jpg" alt="">
             <p style="font-size:15px; text-align: justify;">Contamos con técnicos especializados en todas las marcas capaces de realizar
                 cualquier clase de diagnostico y reparación para su vehículo, dando los mejores
@@ -470,7 +467,7 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body">
             <!-- Project Details Go Here -->
-            <h2>Accesorios y Seguros</h2>
+            <h2>Lujos y Accesorios</h2>
             <img class="img-responsive img-centered" src="img/portfolio/03.jpg" alt="">
             <p style="font-size:15px; text-align: justify;">
                 Ofrecemos toda clase de accesorios y seguros para su vehículo, como lo es desde unos
@@ -512,7 +509,7 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body">
             <!-- Project Details Go Here -->
-            <h2>Lamina y pintura</h2>
+            <h2>Lamina y Pintura</h2>
             <img class="img-responsive img-centered" src="img/portfolio/04.jpg" alt="">
             <p style="font-size:15px; text-align: justify;">Contamos con técnicos especializados en el área de las colisiones los cuales nos
                 permiten asegurarle la calidad y rapidez sobre servicios relacionados, y brindando así
@@ -554,7 +551,7 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body">
             <!-- Project Details Go Here -->
-            <h2>Peritaje a domicilio</h2>
+            <h2>Peritaje a Domicilio</h2>
             <img class="img-responsive img-centered" src="img/portfolio/05.jpg" alt="">
             <p style="font-size:15px; text-align: justify;">Sabemos que al comprar un vehículo usado se siete bastante curiosidad por saber el
                 estado general del mismo, y así estar tranquilos al momento de la negociación. Por
@@ -591,7 +588,7 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body">
             <!-- Project Details Go Here -->
-            <h2>Asesoría en compra de vehículo</h2>
+            <h2>Asesoría en Compra y Venta De Vehículos</h2>
             <img class="img-responsive img-centered" src="img/portfolio/06.jpg" alt="">
             <p style="font-size:15px; text-align: justify;">Para todas las personas interesadas en adquirir vehículo nuevo o usado le brindamos
                 asesoría y acompañamiento para la toma de una buena decisión, desde la gestión de
